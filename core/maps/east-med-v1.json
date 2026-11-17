@@ -1,0 +1,1073 @@
+{
+ "name": "east-med-v1",
+ "doc": "Tam harita v1 (M1): Cenova'nın doğusu, büyük ve orta limanlar; kaba veri ⚠️ (docs/design/map-v1.md). core/tools/mapgen.py üretir; elle düzenlenmez.",
+ "home": "VEN",
+ "ports": [
+  {
+   "id": "GEN",
+   "name": "Cenova",
+   "tier": "büyük",
+   "lat": 44.41,
+   "lon": 8.93,
+   "pop": 65000,
+   "classes": [
+    0.1,
+    0.2,
+    0.7
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "CVV",
+   "name": "Civitavecchia",
+   "tier": "orta",
+   "lat": 42.09,
+   "lon": 11.79,
+   "pop": 8000,
+   "classes": [
+    0.06,
+    0.2,
+    0.74
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "NAP",
+   "name": "Napoli",
+   "tier": "büyük",
+   "lat": 40.84,
+   "lon": 14.25,
+   "pop": 230000,
+   "classes": [
+    0.07,
+    0.2,
+    0.73
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "PAL",
+   "name": "Palermo",
+   "tier": "orta",
+   "lat": 38.12,
+   "lon": 13.36,
+   "pop": 90000,
+   "classes": [
+    0.07,
+    0.2,
+    0.73
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "MES",
+   "name": "Messina",
+   "tier": "orta",
+   "lat": 38.19,
+   "lon": 15.55,
+   "pop": 60000,
+   "classes": [
+    0.08,
+    0.22,
+    0.7
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "TUN",
+   "name": "Tunus",
+   "tier": "orta",
+   "lat": 36.81,
+   "lon": 10.18,
+   "pop": 50000,
+   "classes": [
+    0.05,
+    0.2,
+    0.75
+   ],
+   "wine_factor": 0.2
+  },
+  {
+   "id": "VEN",
+   "name": "Venedik",
+   "tier": "büyük",
+   "lat": 45.44,
+   "lon": 12.33,
+   "pop": 170000,
+   "classes": [
+    0.1,
+    0.2,
+    0.7
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "ANC",
+   "name": "Ancona",
+   "tier": "orta",
+   "lat": 43.62,
+   "lon": 13.51,
+   "pop": 20000,
+   "classes": [
+    0.08,
+    0.22,
+    0.7
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "RAG",
+   "name": "Ragusa",
+   "tier": "orta",
+   "lat": 42.64,
+   "lon": 18.11,
+   "pop": 30000,
+   "classes": [
+    0.12,
+    0.23,
+    0.65
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "BAR",
+   "name": "Bari-Barletta (Apulia)",
+   "tier": "orta",
+   "lat": 41.13,
+   "lon": 16.87,
+   "pop": 30000,
+   "classes": [
+    0.06,
+    0.2,
+    0.74
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "COR",
+   "name": "Korfu",
+   "tier": "orta",
+   "lat": 39.62,
+   "lon": 19.92,
+   "pop": 18000,
+   "classes": [
+    0.08,
+    0.2,
+    0.72
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "ZAN",
+   "name": "Zante",
+   "tier": "orta",
+   "lat": 37.78,
+   "lon": 20.9,
+   "pop": 15000,
+   "classes": [
+    0.06,
+    0.2,
+    0.74
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "CAN",
+   "name": "Kandiye (Girit)",
+   "tier": "orta",
+   "lat": 35.34,
+   "lon": 25.13,
+   "pop": 15000,
+   "classes": [
+    0.08,
+    0.2,
+    0.72
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "CHI",
+   "name": "Sakız",
+   "tier": "orta",
+   "lat": 38.37,
+   "lon": 26.14,
+   "pop": 15000,
+   "classes": [
+    0.1,
+    0.2,
+    0.7
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "SAL",
+   "name": "Selanik",
+   "tier": "orta",
+   "lat": 40.64,
+   "lon": 22.94,
+   "pop": 30000,
+   "classes": [
+    0.06,
+    0.22,
+    0.72
+   ],
+   "wine_factor": 0.6
+  },
+  {
+   "id": "IST",
+   "name": "İstanbul",
+   "tier": "büyük",
+   "lat": 41.01,
+   "lon": 28.98,
+   "pop": 450000,
+   "classes": [
+    0.06,
+    0.24,
+    0.7
+   ],
+   "wine_factor": 0.3
+  },
+  {
+   "id": "RHO",
+   "name": "Rodos",
+   "tier": "orta",
+   "lat": 36.44,
+   "lon": 28.22,
+   "pop": 10000,
+   "classes": [
+    0.05,
+    0.2,
+    0.75
+   ],
+   "wine_factor": 0.6
+  },
+  {
+   "id": "FAM",
+   "name": "Magosa (Kıbrıs)",
+   "tier": "orta",
+   "lat": 35.12,
+   "lon": 33.94,
+   "pop": 8000,
+   "classes": [
+    0.06,
+    0.2,
+    0.74
+   ],
+   "wine_factor": 1.0
+  },
+  {
+   "id": "TRI",
+   "name": "Trablusşam",
+   "tier": "orta",
+   "lat": 34.44,
+   "lon": 35.84,
+   "pop": 15000,
+   "classes": [
+    0.05,
+    0.2,
+    0.75
+   ],
+   "wine_factor": 0.2
+  },
+  {
+   "id": "ALE",
+   "name": "İskenderiye",
+   "tier": "büyük",
+   "lat": 31.2,
+   "lon": 29.92,
+   "pop": 40000,
+   "classes": [
+    0.05,
+    0.2,
+    0.75
+   ],
+   "wine_factor": 0.2
+  }
+ ],
+ "regions": [
+  {
+   "id": "TYR",
+   "winter_mult": 2.0,
+   "corsair": 0.005
+  },
+  {
+   "id": "SIC",
+   "winter_mult": 2.0,
+   "corsair": 0.012
+  },
+  {
+   "id": "ADR",
+   "winter_mult": 3.0,
+   "corsair": 0.003
+  },
+  {
+   "id": "OTR",
+   "winter_mult": 2.0,
+   "corsair": 0.008
+  },
+  {
+   "id": "ION",
+   "winter_mult": 2.0,
+   "corsair": 0.008
+  },
+  {
+   "id": "AEG",
+   "winter_mult": 2.0,
+   "corsair": 0.01
+  },
+  {
+   "id": "STR",
+   "winter_mult": 2.0,
+   "corsair": 0.002
+  },
+  {
+   "id": "LEV",
+   "winter_mult": 1.0,
+   "corsair": 0.01
+  }
+ ],
+ "edges": [
+  {
+   "a": "GEN",
+   "b": "CVV",
+   "days": 5.0,
+   "regions": [
+    "TYR"
+   ],
+   "nm": 187
+  },
+  {
+   "a": "CVV",
+   "b": "NAP",
+   "days": 3.5,
+   "regions": [
+    "TYR"
+   ],
+   "nm": 134
+  },
+  {
+   "a": "NAP",
+   "b": "PAL",
+   "days": 4.5,
+   "regions": [
+    "TYR"
+   ],
+   "nm": 168
+  },
+  {
+   "a": "NAP",
+   "b": "MES",
+   "days": 4.5,
+   "regions": [
+    "TYR"
+   ],
+   "nm": 170
+  },
+  {
+   "a": "PAL",
+   "b": "MES",
+   "days": 3.5,
+   "regions": [
+    "TYR"
+   ],
+   "nm": 103
+  },
+  {
+   "a": "PAL",
+   "b": "TUN",
+   "days": 4.5,
+   "regions": [
+    "SIC"
+   ],
+   "nm": 171
+  },
+  {
+   "a": "TUN",
+   "b": "MES",
+   "days": 9.5,
+   "regions": [
+    "SIC"
+   ],
+   "nm": 269
+  },
+  {
+   "a": "VEN",
+   "b": "ANC",
+   "days": 3.0,
+   "regions": [
+    "ADR"
+   ],
+   "nm": 120
+  },
+  {
+   "a": "VEN",
+   "b": "RAG",
+   "days": 8.0,
+   "regions": [
+    "ADR"
+   ],
+   "nm": 301
+  },
+  {
+   "a": "ANC",
+   "b": "RAG",
+   "days": 5.5,
+   "regions": [
+    "ADR"
+   ],
+   "nm": 210
+  },
+  {
+   "a": "ANC",
+   "b": "BAR",
+   "days": 5.5,
+   "regions": [
+    "ADR",
+    "OTR"
+   ],
+   "nm": 211
+  },
+  {
+   "a": "RAG",
+   "b": "BAR",
+   "days": 3.0,
+   "regions": [
+    "OTR"
+   ],
+   "nm": 106
+  },
+  {
+   "a": "RAG",
+   "b": "COR",
+   "days": 5.5,
+   "regions": [
+    "OTR"
+   ],
+   "nm": 199
+  },
+  {
+   "a": "BAR",
+   "b": "COR",
+   "days": 4.5,
+   "regions": [
+    "OTR"
+   ],
+   "nm": 166
+  },
+  {
+   "a": "MES",
+   "b": "COR",
+   "days": 6.0,
+   "regions": [
+    "ION"
+   ],
+   "nm": 221
+  },
+  {
+   "a": "MES",
+   "b": "ZAN",
+   "days": 7.0,
+   "regions": [
+    "ION"
+   ],
+   "nm": 254
+  },
+  {
+   "a": "COR",
+   "b": "ZAN",
+   "days": 3.0,
+   "regions": [
+    "ION"
+   ],
+   "nm": 120
+  },
+  {
+   "a": "ZAN",
+   "b": "CAN",
+   "days": 6.5,
+   "regions": [
+    "ION",
+    "AEG"
+   ],
+   "nm": 251
+  },
+  {
+   "a": "ZAN",
+   "b": "CHI",
+   "days": 9.5,
+   "regions": [
+    "ION",
+    "AEG"
+   ],
+   "nm": 250
+  },
+  {
+   "a": "CAN",
+   "b": "CHI",
+   "days": 5.0,
+   "regions": [
+    "AEG"
+   ],
+   "nm": 188
+  },
+  {
+   "a": "CHI",
+   "b": "SAL",
+   "days": 5.5,
+   "regions": [
+    "AEG"
+   ],
+   "nm": 201
+  },
+  {
+   "a": "CHI",
+   "b": "IST",
+   "days": 5.5,
+   "regions": [
+    "STR"
+   ],
+   "nm": 206
+  },
+  {
+   "a": "SAL",
+   "b": "IST",
+   "days": 7.5,
+   "regions": [
+    "AEG",
+    "STR"
+   ],
+   "nm": 275
+  },
+  {
+   "a": "CAN",
+   "b": "RHO",
+   "days": 4.5,
+   "regions": [
+    "AEG"
+   ],
+   "nm": 164
+  },
+  {
+   "a": "CHI",
+   "b": "RHO",
+   "days": 4.0,
+   "regions": [
+    "AEG"
+   ],
+   "nm": 153
+  },
+  {
+   "a": "CAN",
+   "b": "ALE",
+   "days": 9.0,
+   "regions": [
+    "LEV"
+   ],
+   "nm": 346
+  },
+  {
+   "a": "RHO",
+   "b": "FAM",
+   "days": 7.5,
+   "regions": [
+    "LEV"
+   ],
+   "nm": 290
+  },
+  {
+   "a": "RHO",
+   "b": "ALE",
+   "days": 8.5,
+   "regions": [
+    "LEV"
+   ],
+   "nm": 326
+  },
+  {
+   "a": "FAM",
+   "b": "TRI",
+   "days": 2.5,
+   "regions": [
+    "LEV"
+   ],
+   "nm": 102
+  },
+  {
+   "a": "FAM",
+   "b": "ALE",
+   "days": 8.5,
+   "regions": [
+    "LEV"
+   ],
+   "nm": 310
+  },
+  {
+   "a": "TRI",
+   "b": "ALE",
+   "days": 9.5,
+   "regions": [
+    "LEV"
+   ],
+   "nm": 356
+  }
+ ],
+ "supply": [
+  {
+   "good": "WHT",
+   "plan": [
+    {
+     "port": "GEN",
+     "own": 0.2
+    },
+    {
+     "port": "CVV",
+     "own": 0.8
+    },
+    {
+     "port": "NAP",
+     "own": 0.5
+    },
+    {
+     "port": "PAL",
+     "exp": 1.0
+    },
+    {
+     "port": "MES",
+     "own": 0.4
+    },
+    {
+     "port": "TUN",
+     "own": 0.8
+    },
+    {
+     "port": "VEN",
+     "own": 0.4
+    },
+    {
+     "port": "ANC",
+     "own": 0.8
+    },
+    {
+     "port": "RAG",
+     "own": 0.1
+    },
+    {
+     "port": "BAR",
+     "exp": 1.0
+    },
+    {
+     "port": "COR",
+     "own": 0.4
+    },
+    {
+     "port": "ZAN",
+     "own": 0.3
+    },
+    {
+     "port": "CAN",
+     "own": 0.5
+    },
+    {
+     "port": "CHI",
+     "own": 0.3
+    },
+    {
+     "port": "SAL",
+     "exp": 0.4
+    },
+    {
+     "port": "IST",
+     "own": 0.6
+    },
+    {
+     "port": "RHO",
+     "own": 0.4
+    },
+    {
+     "port": "FAM",
+     "exp": 0.3
+    },
+    {
+     "port": "TRI",
+     "own": 0.7
+    },
+    {
+     "port": "ALE",
+     "exp": 1.0
+    }
+   ]
+  },
+  {
+   "good": "BRL",
+   "plan": [
+    {
+     "port": "GEN",
+     "own": 0.4
+    },
+    {
+     "port": "CVV",
+     "own": 0.9
+    },
+    {
+     "port": "NAP",
+     "own": 0.7
+    },
+    {
+     "port": "PAL",
+     "exp": 0.6
+    },
+    {
+     "port": "MES",
+     "own": 0.6
+    },
+    {
+     "port": "TUN",
+     "own": 0.9
+    },
+    {
+     "port": "VEN",
+     "own": 0.6
+    },
+    {
+     "port": "ANC",
+     "own": 0.9
+    },
+    {
+     "port": "RAG",
+     "own": 0.3
+    },
+    {
+     "port": "BAR",
+     "exp": 0.6
+    },
+    {
+     "port": "COR",
+     "own": 0.6
+    },
+    {
+     "port": "ZAN",
+     "own": 0.5
+    },
+    {
+     "port": "CAN",
+     "own": 0.7
+    },
+    {
+     "port": "CHI",
+     "own": 0.5
+    },
+    {
+     "port": "SAL",
+     "exp": 0.4
+    },
+    {
+     "port": "IST",
+     "own": 0.8
+    },
+    {
+     "port": "RHO",
+     "own": 0.6
+    },
+    {
+     "port": "FAM",
+     "own": 1.0
+    },
+    {
+     "port": "TRI",
+     "own": 0.9
+    },
+    {
+     "port": "ALE",
+     "exp": 1.0
+    }
+   ]
+  },
+  {
+   "good": "OIL",
+   "plan": [
+    {
+     "port": "GEN",
+     "own": 0.3
+    },
+    {
+     "port": "CVV",
+     "own": 0.5
+    },
+    {
+     "port": "NAP",
+     "own": 0.6
+    },
+    {
+     "port": "PAL",
+     "own": 0.5
+    },
+    {
+     "port": "MES",
+     "own": 0.5
+    },
+    {
+     "port": "TUN",
+     "exp": 0.4
+    },
+    {
+     "port": "VEN",
+     "own": 0.0
+    },
+    {
+     "port": "ANC",
+     "own": 0.4
+    },
+    {
+     "port": "RAG",
+     "own": 0.5
+    },
+    {
+     "port": "BAR",
+     "exp": 1.0
+    },
+    {
+     "port": "COR",
+     "exp": 0.3
+    },
+    {
+     "port": "ZAN",
+     "exp": 0.3
+    },
+    {
+     "port": "CAN",
+     "exp": 0.4
+    },
+    {
+     "port": "CHI",
+     "own": 0.8
+    },
+    {
+     "port": "SAL",
+     "own": 0.3
+    },
+    {
+     "port": "IST",
+     "own": 0.3
+    },
+    {
+     "port": "RHO",
+     "own": 0.6
+    },
+    {
+     "port": "FAM",
+     "own": 0.3
+    },
+    {
+     "port": "TRI",
+     "own": 0.6
+    },
+    {
+     "port": "ALE",
+     "own": 0.2
+    }
+   ]
+  },
+  {
+   "good": "WIN",
+   "plan": [
+    {
+     "port": "GEN",
+     "own": 0.4
+    },
+    {
+     "port": "CVV",
+     "own": 0.8
+    },
+    {
+     "port": "NAP",
+     "exp": 0.4
+    },
+    {
+     "port": "PAL",
+     "own": 0.6
+    },
+    {
+     "port": "MES",
+     "own": 0.6
+    },
+    {
+     "port": "TUN",
+     "own": 0.0
+    },
+    {
+     "port": "VEN",
+     "own": 0.2
+    },
+    {
+     "port": "ANC",
+     "own": 0.6
+    },
+    {
+     "port": "RAG",
+     "own": 0.5
+    },
+    {
+     "port": "BAR",
+     "own": 0.8
+    },
+    {
+     "port": "COR",
+     "exp": 0.3
+    },
+    {
+     "port": "ZAN",
+     "exp": 0.3
+    },
+    {
+     "port": "CAN",
+     "exp": 1.0
+    },
+    {
+     "port": "CHI",
+     "exp": 0.4
+    },
+    {
+     "port": "SAL",
+     "own": 0.5
+    },
+    {
+     "port": "IST",
+     "own": 0.5
+    },
+    {
+     "port": "RHO",
+     "own": 0.6
+    },
+    {
+     "port": "FAM",
+     "exp": 0.3
+    },
+    {
+     "port": "TRI",
+     "own": 0.0
+    },
+    {
+     "port": "ALE",
+     "own": 0.0
+    }
+   ]
+  },
+  {
+   "good": "WOL",
+   "plan": [
+    {
+     "port": "GEN",
+     "own": 0.2
+    },
+    {
+     "port": "NAP",
+     "own": 0.3
+    },
+    {
+     "port": "VEN",
+     "own": 0.3
+    },
+    {
+     "port": "BAR",
+     "exp": 0.4
+    },
+    {
+     "port": "SAL",
+     "exp": 0.6
+    },
+    {
+     "port": "IST",
+     "exp": 1.0
+    }
+   ]
+  },
+  {
+   "good": "ALM",
+   "plan": [
+    {
+     "port": "CVV",
+     "exp": 1.0
+    }
+   ]
+  },
+  {
+   "good": "PEP",
+   "plan": [
+    {
+     "port": "ALE",
+     "exp": 1.0
+    },
+    {
+     "port": "TRI",
+     "exp": 0.4
+    }
+   ]
+  }
+ ],
+ "pools": [
+  {
+   "port": "VEN",
+   "good": "CLF",
+   "serves": [
+    "VEN",
+    "GEN",
+    "CVV",
+    "NAP",
+    "PAL",
+    "MES",
+    "ANC",
+    "RAG",
+    "BAR",
+    "COR",
+    "ZAN",
+    "CAN",
+    "CHI",
+    "SAL",
+    "IST",
+    "RHO",
+    "FAM",
+    "TRI",
+    "ALE",
+    "TUN"
+   ]
+  },
+  {
+   "port": "VEN",
+   "good": "CLC",
+   "serves": [
+    "VEN",
+    "ANC",
+    "RAG",
+    "BAR",
+    "COR",
+    "ZAN",
+    "CAN",
+    "FAM",
+    "GEN",
+    "CVV",
+    "NAP",
+    "PAL",
+    "MES"
+   ]
+  },
+  {
+   "port": "IST",
+   "good": "CLC",
+   "serves": [
+    "IST",
+    "CHI",
+    "RHO",
+    "TRI",
+    "ALE",
+    "TUN"
+   ]
+  },
+  {
+   "port": "SAL",
+   "good": "CLC",
+   "serves": [
+    "SAL"
+   ]
+  }
+ ]
+}

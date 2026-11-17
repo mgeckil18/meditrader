@@ -1,0 +1,43 @@
+{
+  "name": "classic6",
+  "doc": "D5 haritası (sim/world5.py PORTS5, EDGES, EDGE_REGIONS, REGIONS, SUPPLY, POOL_PLAN). Python oracle'ıyla birebir; değiştirilmez (K-033).",
+  "home": "VEN",
+  "ports": [
+    {"id": "VEN", "name": "Venedik", "pop": 170000, "classes": [0.10, 0.20, 0.70], "wine_factor": 1.0},
+    {"id": "IST", "name": "İstanbul", "pop": 450000, "classes": [0.06, 0.24, 0.70], "wine_factor": 0.3},
+    {"id": "ALE", "name": "İskenderiye", "pop": 40000, "classes": [0.05, 0.20, 0.75], "wine_factor": 0.2},
+    {"id": "RAG", "name": "Ragusa", "pop": 30000, "classes": [0.12, 0.23, 0.65], "wine_factor": 1.0},
+    {"id": "COR", "name": "Korfu", "pop": 18000, "classes": [0.08, 0.20, 0.72], "wine_factor": 1.0},
+    {"id": "CHI", "name": "Sakız", "pop": 15000, "classes": [0.10, 0.20, 0.70], "wine_factor": 1.0}
+  ],
+  "regions": [
+    {"id": "ADR", "winter_mult": 3.0, "corsair": 0.003},
+    {"id": "OTR", "winter_mult": 2.0, "corsair": 0.008},
+    {"id": "AEG", "winter_mult": 2.0, "corsair": 0.010},
+    {"id": "STR", "winter_mult": 2.0, "corsair": 0.002},
+    {"id": "LEV", "winter_mult": 1.0, "corsair": 0.010}
+  ],
+  "edges": [
+    {"a": "VEN", "b": "RAG", "days": 8.0, "regions": ["ADR"]},
+    {"a": "RAG", "b": "COR", "days": 5.0, "regions": ["OTR"]},
+    {"a": "VEN", "b": "COR", "days": 12.0, "regions": ["ADR", "OTR"]},
+    {"a": "COR", "b": "CHI", "days": 9.0, "regions": ["AEG"]},
+    {"a": "CHI", "b": "IST", "days": 4.0, "regions": ["STR"]},
+    {"a": "CHI", "b": "ALE", "days": 8.0, "regions": ["LEV"]},
+    {"a": "COR", "b": "ALE", "days": 14.0, "regions": ["LEV"]}
+  ],
+  "supply": [
+    {"good": "WHT", "plan": [{"port": "VEN", "own": 0.4}, {"port": "IST", "own": 0.6}, {"port": "RAG", "own": 0.1}, {"port": "COR", "own": 0.4}, {"port": "CHI", "own": 0.3}, {"port": "ALE", "exp": 1.0}]},
+    {"good": "BRL", "plan": [{"port": "VEN", "own": 0.6}, {"port": "IST", "own": 0.8}, {"port": "RAG", "own": 0.3}, {"port": "COR", "own": 0.6}, {"port": "CHI", "own": 0.5}, {"port": "ALE", "exp": 1.0}]},
+    {"good": "OIL", "plan": [{"port": "VEN", "own": 0.0}, {"port": "IST", "own": 0.3}, {"port": "RAG", "own": 0.5}, {"port": "ALE", "own": 0.2}, {"port": "COR", "exp": 0.6}, {"port": "CHI", "exp": 0.4}]},
+    {"good": "WIN", "plan": [{"port": "VEN", "own": 0.2}, {"port": "IST", "own": 0.5}, {"port": "RAG", "own": 0.5}, {"port": "ALE", "own": 0.0}, {"port": "COR", "exp": 0.5}, {"port": "CHI", "exp": 0.5}]},
+    {"good": "WOL", "plan": [{"port": "VEN", "own": 0.3}, {"port": "IST", "exp": 1.0}]},
+    {"good": "ALM", "plan": [{"port": "VEN", "own": 1.0}]},
+    {"good": "PEP", "plan": [{"port": "ALE", "exp": 1.0}]}
+  ],
+  "pools": [
+    {"port": "VEN", "good": "CLF", "serves": ["VEN", "IST", "ALE", "RAG", "COR", "CHI"]},
+    {"port": "VEN", "good": "CLC", "serves": ["VEN", "RAG", "COR", "CHI"]},
+    {"port": "IST", "good": "CLC", "serves": ["IST", "ALE"]}
+  ]
+}

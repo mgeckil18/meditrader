@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  rust:
+    # Pinned: the RNG fixtures and Python/Rust parity call glibc libm; 24.04 ships the same glibc (2.39)
+    # the fixtures were generated with.
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: core
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: core
+      - run: cargo fmt --all --check
+      - run: cargo clippy --release --workspace --all-targets -- -D warnings
+      - run: cargo test --release --workspace
+      - run: cargo build --release --workspace
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: pip install -r ../requirements.txt
+      - name: Bit-exact parity, Python reference engine vs Rust core
+        working-directory: .
+        run: |
+          python3 core/tools/parity_check.py                        # 3-port setup, 60 days
+          python3 core/tools/parity_check.py F-B-R1-O3 1 200 50     # full classic map, 200 days
+      - name: Python sources compile
+        working-directory: .
+        run: python3 -m compileall -q sim experiments core/tools showcase

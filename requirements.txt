@@ -1,0 +1,2 @@
+numpy==2.4.4      # bit-exact parity with the Rust core depends on NumPy's RNG and math; fixtures were generated with 2.4.4
+matplotlib>=3.8

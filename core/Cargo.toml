@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+members = ["medi-core"]
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+debug = 1            # symbols for profiling; no effect on speed
+
+# Note: do NOT use target-cpu=native. FMA instructions break bit-exact parity with Python/NumPy.

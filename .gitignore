@@ -1,0 +1,11 @@
+# build and run outputs
+core/target/
+experiments/out/
+__pycache__/
+*.pyc
+*.so
+.venv/
+
+# local, not part of the repo
+medi-github-brief.md
+yorumlar.md

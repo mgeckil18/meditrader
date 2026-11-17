@@ -1,0 +1,11 @@
+[package]
+name = "medi-core"
+edition.workspace = true
+version.workspace = true
+description = "Medi simulation core: bit-exact Rust port of the Python reference engine (sim/world5.py), extended since"
+
+[dependencies]
+indexmap = { version = "2", features = ["serde"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["float_roundtrip", "preserve_order"] }
+sha1_smol = "1"
