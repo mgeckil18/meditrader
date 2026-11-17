@@ -30,7 +30,14 @@ jobs:
       - run: pip install -r ../requirements.txt
       - name: Bit-exact parity, Python reference engine vs Rust core
         working-directory: .
+        # NumPy ships its own AVX-512 kernels for exp/log/power and picks them at runtime on AVX-512 CPUs
+        # (most CI runners). They can differ from glibc libm by 1 ulp, so the Python oracle's results depend
+        # on the CPU. The Rust core always uses glibc. Disabling those kernels reproduces the reference
+        # machine (AVX2, no AVX-512), where the oracle was frozen.
+        env:
+          NPY_DISABLE_CPU_FEATURES: "X86_V4 AVX512_ICL AVX512_SPR"
         run: |
+          python3 -c "import numpy._core._multiarray_umath as m; print([k for k, v in m.__cpu_features__.items() if v])"
           python3 core/tools/parity_check.py                        # 3-port setup, 60 days
           python3 core/tools/parity_check.py F-B-R1-O3 1 200 50     # full classic map, 200 days
       - name: Python sources compile
