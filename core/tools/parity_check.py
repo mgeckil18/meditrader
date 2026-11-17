@@ -13,6 +13,7 @@ Usage (from repo root, after `cargo build --release` in core/):
 Defaults: VRS-B-R1-O3 0 60 10. Exit code 0 = identical, 1 = divergence.
 """
 import json
+import os
 import pathlib
 import subprocess
 import sys
@@ -42,8 +43,14 @@ def is_default(v):
     return v in (None, False, 0, 0.0, -1, [], {}, "")
 
 
+# NumPy picks its own AVX-512 kernels for exp/log/power at runtime on AVX-512 CPUs. They can differ from
+# glibc libm by 1 ulp, so the Python oracle's output depends on the CPU, while the Rust core always calls
+# glibc. Disabling them reproduces the reference machine (AVX2, no AVX-512) the oracle was frozen on.
+NPY_ENV = {**os.environ, "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR"}
+
+
 def run(cmd):
-    subprocess.run([str(c) for c in cmd], check=True, cwd=ROOT, stdout=subprocess.DEVNULL)
+    subprocess.run([str(c) for c in cmd], check=True, cwd=ROOT, stdout=subprocess.DEVNULL, env=NPY_ENV)
 
 
 def main():

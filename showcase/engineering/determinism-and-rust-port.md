@@ -39,6 +39,7 @@ A 10-year full-map run went from ~6 minutes to 6-9 seconds. Every optimisation (
 - **Shop ids were not unique** after a snapshot rebase. Python removed shops by object identity, Rust by id string, so Rust removed the wrong shop in year 9 of one seed. Fix: a temporary tag inside the function.
 - **An RNG stream is created unconditionally** on day 1 of a cold start; its existence is part of the state, so Rust does the same.
 - **`serde(flatten)` cannot read integer-keyed maps** (JSON keys are strings); the world struct is merged by hand.
+- **The Python oracle itself depends on the CPU.** The first CI run failed the full-map check on day 0, while every local run passed. NumPy picks its own AVX-512 kernels for `exp`/`log`/`power` at runtime, and CI runners have AVX-512. Those kernels can differ from glibc by 1 ulp, and merchant personalities are drawn through `np.exp`. The development machine has no AVX-512, so NumPy used glibc there. `parity_check.py` now disables those kernels for the Python side. The Rust core calls glibc everywhere, so its output does not depend on the CPU's vector extensions.
 - **FMA breaks parity**, so `target-cpu=native` is forbidden in [`core/Cargo.toml`](../../core/Cargo.toml).
 
 ## Reproduce
